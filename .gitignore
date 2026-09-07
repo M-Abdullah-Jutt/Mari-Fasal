@@ -1,0 +1,65 @@
+# =============================================================================
+# Smart Agriculture Assistant — .gitignore
+# =============================================================================
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyd
+
+# ─── Virtual Environments ────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ─── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── Node / Expo (Mari-Fasal) ────────────────────────────────────────────────
+Mari-Fasal/node_modules/
+Mari-Fasal/.expo/local/
+Mari-Fasal/.expo/README.md
+
+# ─── Large Dataset Folders (GBs of images) ──────────────────────────────────
+Data/Plant Disease Detection/
+Data/Plant Segmentation/
+
+# Keep non-image files under Data/ (PDFs, docs, CSVs, jpgs at root level)
+!Data/Agriculture Assistant Project Details.pdf
+!Data/Plant_Disease_AI_System_Documentation.docx
+!Data/Workflow.jpg
+
+# ─── ML Model Files (large binary files) ─────────────────────────────────────
+# PyTorch model (~98MB) — excluded, exceeds GitHub limit
+Models/Plant_Segmentation/v1/plantseg_unet_disease.pth
+
+# TFLite model (~42MB) — included, will try to push
+# Models/Plant_Disease_Prediction/v1/tf_lite_diseases_detection_model.tflite
+
+# ─── Databases (SQLite) ──────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ─── OS & Editor ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+.env
+.env.*
+*.log
+.vincent/

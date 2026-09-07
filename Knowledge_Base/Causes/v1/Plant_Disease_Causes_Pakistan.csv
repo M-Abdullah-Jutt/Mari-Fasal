@@ -1,0 +1,39 @@
+Category,Crop,Disease,Causes
+Apple___Apple_scab,Apple,Apple Scab,"Caused by fungus Venturia inaequalis. Thrives in cool, wet springs (common in northern areas like Swat and Gilgit)."
+Apple___Black_rot,Apple  ,Black Rot,"Fungal infection (Botryosphaeria obtusa). Spreads in warm, humid weather through wounds in the bark or fruit."
+Apple___Cedar_apple_rust,Apple  ,Cedar Apple Rust,Fungal disease requiring two hosts (apple and juniper/cedar trees). Spreads via wind-blown spores during spring rains.
+Apple___healthy,Apple  ,Healthy,N/A - Plant is healthy. No disease agents present.
+Blueberry___healthy,Blueberry,Healthy,N/A - Plant is healthy.
+Cherry_(including_sour)___Powdery_mildew,Cherry,Powdery Mildew,Fungal pathogen (Podosphaera clandestina). Favored by high humidity but dry leaves; common in warm days and cool nights.
+Cherry_(including_sour)___healthy,Cherry,Healthy,N/A - Plant is healthy.
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn ,Gray Leaf Spot,"Fungus (Cercospora zeae-maydis). Triggered by high humidity, overcast days, and warm temperatures, especially during Punjab's monsoon season."
+Corn_(maize)___Common_rust_,Corn ,Common Rust,Fungus (Puccinia sorghi). Spreads rapidly in cool (16-25°C) and highly humid conditions with heavy dew.
+Corn_(maize)___Northern_Leaf_Blight,Corn ,Northern Leaf Blight,Fungus (Exserohilum turcicum). Prevalent in moderate temperatures with extended periods of leaf wetness.
+Corn_(maize)___healthy,Corn ,Healthy,N/A - Plant is healthy.
+Grape___Black_rot,Grape ,Black Rot,"Fungus (Guignardia bidwellii). Spores spread via rain splashes during warm, wet growing seasons."
+Grape___Esca_(Black_Measles),Grape ,Esca,Complex of fungi entering through pruning wounds. Exacerbated by plant stress and fluctuating weather.
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot),Grape ,Leaf Blight,Fungus (Pseudocercospora vitis). High rainfall and poor air circulation in the vineyard promote disease.
+Grape___healthy,Grape ,Healthy,N/A - Plant is healthy.
+Orange___Haunglongbing_(Citrus_greening),Orange,Citrus Greening,Bacterial disease (Candidatus Liberibacter) spread by the Asian Citrus Psyllid insect. A major threat in the Sargodha citrus belt.
+Peach___Bacterial_spot,Peach,Bacterial Spot,"Bacteria (Xanthomonas campestris). Thrives in warm, wet, and windy conditions, especially in sandy soils."
+Peach___healthy,Peach,Healthy,N/A - Plant is healthy.
+"Pepper,_bell___Bacterial_spot",Bell Pepper,Bacterial Spot,"Bacteria (Xanthomonas). Spread by heavy rains, overhead irrigation, and warm temperatures."
+"Pepper,_bell___healthy",Bell Pepper,Healthy,N/A - Plant is healthy.
+Potato___Early_blight,Potato ,Early Blight,Fungus (Alternaria solani). Favored by warm temperatures and alternating wet/dry weather patterns.
+Potato___Late_blight,Potato ,Late Blight,"Oomycete (Phytophthora infestans). Rapidly spreads in cool, wet weather, common during winter rains in Punjab and KPK."
+Potato___healthy,Potato ,Healthy,N/A - Plant is healthy.
+Raspberry___healthy,Raspberry,Healthy,N/A - Plant is healthy.
+Soybean___healthy,Soybean,Healthy,N/A - Plant is healthy.
+Squash___Powdery_mildew,Squash,Powdery Mildew,Various fungi. Develops in high humidity with moderate temperatures; does not require leaf wetness.
+Strawberry___Leaf_scorch,Strawberry,Leaf Scorch,Fungus (Diplocarpon earlianum). Prolonged leaf wetness from rain or overhead sprinkler irrigation.
+Strawberry___healthy,Strawberry,Healthy,N/A - Plant is healthy.
+Tomato___Bacterial_spot,Tomato ,Bacterial Spot,"Bacteria (Xanthomonas). Favors high moisture, frequent rainfall, and warm temperatures."
+Tomato___Early_blight,Tomato ,Early Blight,Fungus (Alternaria solani). Stresses plants in warm weather with heavy dew or frequent rain.
+Tomato___Late_blight,Tomato ,Late Blight,"Oomycete (Phytophthora infestans). Devastating in cool, rainy, and highly humid conditions."
+Tomato___Leaf_Mold,Tomato ,Leaf Mold,Fungus (Passalora fulva). Highly common in tunnel farming/greenhouses with poor ventilation and high humidity.
+Tomato___Septoria_leaf_spot,Tomato ,Septoria Leaf Spot,"Fungus (Septoria lycopersici). Spreads via splashing rain or overhead watering during warm, wet periods."
+Tomato___Spider_mites Two-spotted_spider_mite,Tomato ,Spider Mites,"Pest infestation. Thrives in very hot, dry, and dusty weather conditions, common in peak Pakistani summers."
+Tomato___Target_Spot,Tomato ,Target Spot,Fungus (Corynespora cassiicola). Requires high humidity and free moisture on leaves for extended hours.
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato ,Yellow Leaf Curl Virus,Virus (TYLCV) transmitted exclusively by the whitefly (Safed Makhi). Severe issue in summer and autumn crops.
+Tomato___Tomato_mosaic_virus,Tomato ,Mosaic Virus,"Tobamovirus. Mechanically transmitted via contaminated hands, tools, clothes, and infected seeds."
+Tomato___healthy,Tomato ,Healthy,N/A - Plant is healthy.

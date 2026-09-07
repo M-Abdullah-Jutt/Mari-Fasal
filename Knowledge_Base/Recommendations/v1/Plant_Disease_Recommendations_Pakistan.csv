@@ -1,0 +1,39 @@
+Category,Crop,Disease,Recommendations
+Apple___Apple_scab,Apple ,Apple Scab,Apply protectant fungicides (like Mancozeb) before spring rains. Clear fallen leaves (desi safai) in winter to reduce fungal spores.
+Apple___Black_rot,Apple ,Black Rot,Prune and destroy dead/diseased branches. Ensure proper airflow in the canopy. Apply copper-based fungicides if severe.
+Apple___Cedar_apple_rust,Apple ,Cedar Apple Rust,Remove nearby wild juniper/cedar trees if possible. Spray appropriate fungicides during the apple blossom period.
+Apple___healthy,Apple ,Healthy,Maintain regular watering and balanced fertilizer (DAP/Urea) application.
+Blueberry___healthy,Blueberry,Healthy,Maintain acidic soil pH. Keep plants watered and mulched.
+Cherry_(including_sour)___Powdery_mildew,Cherry,Powdery Mildew,Ensure good air circulation. Spray sulfur or potassium bicarbonate based fungicides at first sign of white powdery spots.
+Cherry_(including_sour)___healthy,Cherry,Healthy,Maintain standard orchard care and pruning.
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn ,Gray Leaf Spot,Use resistant seed varieties available in the local market. Practice crop rotation and bury plant debris after harvest.
+Corn_(maize)___Common_rust_,Corn ,Common Rust,Usually doesn't require chemical control unless severe. Plant rust-resistant hybrids and ensure balanced nitrogen application.
+Corn_(maize)___Northern_Leaf_Blight,Corn ,Northern Leaf Blight,Apply foliar fungicides if lesions appear before silking. Rotate crops away from corn for at least one year.
+Corn_(maize)___healthy,Corn ,Healthy,Maintain standard irrigation and fertilizer schedules.
+Grape___Black_rot,Grape ,Black Rot,Remove infected grapes/mummies (khrab angoor) from vines. Apply Mancozeb or specialized grape fungicides from early bloom.
+Grape___Esca_(Black_Measles),Grape ,Esca,No chemical cure. Avoid pruning during wet weather. Disinfect pruning shears (kainchi) between cuts.
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot),Grape ,Leaf Blight,Improve canopy airflow by trimming excess leaves. Apply standard copper fungicides during wet seasons.
+Grape___healthy,Grape ,Healthy,Follow standard fertilization and seasonal pruning.
+Orange___Haunglongbing_(Citrus_greening),Orange,Citrus Greening,No cure exists. Immediately uproot and burn infected trees. Spray Imidacloprid to control the citrus psyllid vector. Always buy certified disease-free nursery plants.
+Peach___Bacterial_spot,Peach,Bacterial Spot,Plant resistant peach varieties. Apply copper sprays during the dormant season and early spring.
+Peach___healthy,Peach,Healthy,Maintain proper pruning and irrigation.
+"Pepper,_bell___Bacterial_spot",Bell Pepper,Bacterial Spot,Use disease-free seeds. Avoid overhead watering. Spray copper-based bactericides combined with Mancozeb.
+"Pepper,_bell___healthy",Bell Pepper,Healthy,Maintain consistent soil moisture.
+Potato___Early_blight,Potato,Early Blight,Ensure crop rotation. Use fungicides like Chlorothalonil or Mancozeb. Harvest only when vines are completely dead.
+Potato___Late_blight,Potato ,Late Blight,"Use certified seed potatoes (from northern areas like Gilgit/Swat). Apply systemic fungicides (e.g., Ridomil Gold) preemptively during cloudy, wet winter weather."
+Potato___healthy,Potato,Healthy,Follow recommended NPK fertilizer guidelines and proper earthing up (mitti charhana).
+Raspberry___healthy,Raspberry,Healthy,Maintain standard care.
+Soybean___healthy,Soybean,Healthy,Maintain standard care.
+Squash___Powdery_mildew,Squash,Powdery Mildew,Spray neem oil or sulfur-based fungicides early. Avoid overcrowding vines to ensure good sunlight and airflow.
+Strawberry___Leaf_scorch,Strawberry,Leaf Scorch,Remove and burn infected leaves. Avoid overhead watering; use drip irrigation if possible. Keep rows weed-free.
+Strawberry___healthy,Strawberry,Healthy,Maintain standard care and mulching.
+Tomato___Bacterial_spot,Tomato ,Bacterial Spot,Avoid working in fields when plants are wet. Use copper sprays. Rotate tomato crops with non-solanaceous crops.
+Tomato___Early_blight,Tomato ,Early Blight,Stake plants to keep leaves off the soil. Mulch the base. Apply fungicides like Difenoconazole or Mancozeb.
+Tomato___Late_blight,Tomato ,Late Blight,Destroy infected plants immediately to prevent spread. Spray Metalaxyl/Mancozeb formulations during rainy spells.
+Tomato___Leaf_Mold,Tomato ,Leaf Mold,"For tunnel farming, aggressively ventilate the greenhouse to lower humidity. Space plants wider."
+Tomato___Septoria_leaf_spot,Tomato ,Septoria Leaf Spot,Remove lower infected leaves. Apply copper-based fungicides. Do not compost infected plant debris.
+Tomato___Spider_mites Two-spotted_spider_mite,Tomato ,Spider Mites,"Spray Abamectin or specialized miticides. Wash down plants with water to disrupt webs, as mites hate high humidity. Keep soil consistently watered."
+Tomato___Target_Spot,Tomato ,Target Spot,Improve airflow around the plant base. Apply targeted fungicides early in the disease cycle.
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato ,Yellow Leaf Curl Virus,"Control the Whitefly (Safed Makhi) vector using sticky traps and insecticides (e.g., Acetamiprid, Imidacloprid). Remove infected plants immediately. Plant resistant varieties."
+Tomato___Tomato_mosaic_virus,Tomato ,Mosaic Virus,No cure. Uproot and burn infected plants. Wash hands with soap and disinfect tools before touching healthy plants. Do not smoke tobacco near plants.
+Tomato___healthy,Tomato ,Healthy,Maintain standard fertilizer and watering routines.
