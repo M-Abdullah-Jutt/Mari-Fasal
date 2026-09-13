@@ -10,6 +10,11 @@ import sys
 import os
 import tempfile
 
+from Models.Plant_Disease_Prediction.plant_db import get_disease_info  # adjust path to match your structure
+
+DB_PATH = "database/marifasalv2.db"
+
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
 sys.path.append(PROJECT_ROOT)
@@ -95,6 +100,37 @@ async def predict_severity(file: UploadFile = File(...)):
         "disease_pixels": result["disease_pixels"],
     }
 
+
+@app.post("/predict-full")
+async def predict_full(file: UploadFile = File(...)):
+    raw_bytes = await file.read()
+
+    # Disease classification
+    disease_image = read_file_as_image(raw_bytes)
+    img_batch = np.expand_dims(disease_image, axis=0)
+    interpreter.set_tensor(input_details[0]['index'], img_batch)
+    interpreter.invoke()
+    predictions = interpreter.get_tensor(output_details[0]['index'])[0]
+    predicted_class_idx = np.argmax(predictions)
+    predicted_class = CLASS_NAMES[predicted_class_idx]
+    confidence = float(predictions[predicted_class_idx])
+
+    # Severity estimation
+    img_bgr = read_file_as_cv2_image(raw_bytes)
+    severity_result = estimate_severity(img_bgr, severity_model, device)
+
+    # NEW: causes + recommendations lookup
+    disease_info = get_disease_info(predicted_class, DB_PATH)
+
+    return {
+        "disease_class": predicted_class,
+        "disease_confidence": round(confidence * 100, 2),
+        "severity_percentage": severity_result["severity_pct"],
+        "crop": disease_info["crop"] if disease_info else None,
+        "disease_name": disease_info["disease"] if disease_info else None,
+        "causes": disease_info["causes"] if disease_info else [],
+        "recommendations": disease_info["recommendations"] if disease_info else [],
+    }
 
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)

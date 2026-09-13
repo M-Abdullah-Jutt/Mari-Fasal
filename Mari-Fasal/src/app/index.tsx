@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   SafeAreaView,
@@ -12,13 +13,12 @@ import {
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 
-import { predictDiseaseAndSeverity, CombinedResult } from "../api/plantApi";
+import { predictFull, PlantAnalysisResult } from "../api/plantApi";
 import ResultCard from "../components/ResultCard";
-
 
 export default function Index() {
   const [imageUri, setImageUri] = useState<string | null>(null);
-  const [result, setResult] = useState<CombinedResult | null>(null);
+  const [result, setResult] = useState<PlantAnalysisResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -69,8 +69,8 @@ export default function Index() {
     setResult(null);
 
     try {
-      const combined = await predictDiseaseAndSeverity(imageUri);
-      setResult(combined);
+      const analysis = await predictFull(imageUri);
+      setResult(analysis);
     } catch (err) {
       console.error(err);
       setError(

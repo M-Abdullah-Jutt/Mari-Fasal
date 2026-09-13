@@ -1,17 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import type { CombinedResult } from "../api/plantApi";
+import type { PlantAnalysisResult } from "../api/plantApi";
 
 interface ResultCardProps {
-  result: CombinedResult | null;
-}
-
-/**
- * Formats a raw class name like "Tomato___Late_blight" into "Tomato - Late blight"
- */
-function formatClassName(rawClass?: string): string {
-  if (!rawClass) return "";
-  return rawClass.replace(/___/g, " - ").replace(/_/g, " ");
+  result: PlantAnalysisResult | null;
 }
 
 function getSeverityLevel(pct: number): { label: string; color: string } {
@@ -23,33 +15,57 @@ function getSeverityLevel(pct: number): { label: string; color: string } {
 export default function ResultCard({ result }: ResultCardProps) {
   if (!result) return null;
 
-  const isHealthy = result.class?.toLowerCase().includes("healthy");
+  const isHealthy = result.disease_class?.toLowerCase().includes("healthy");
   const severityPct = result.severity_percentage ?? 0;
   const severity = getSeverityLevel(severityPct);
 
   return (
     <View style={styles.card}>
-      <Text style={styles.label}>Diagnosis</Text>
-      <Text style={styles.diseaseName}>{formatClassName(result.class)}</Text>
+      <Text style={styles.label}>Crop</Text>
+      <Text style={styles.cropName}>{result.crop ?? "Unknown"}</Text>
+
+      <Text style={[styles.label, styles.sectionSpacing]}>Diagnosis</Text>
+      <Text style={styles.diseaseName}>{result.disease_name ?? result.disease_class}</Text>
       <Text style={styles.confidence}>
-        Confidence: {result.confidence_percentage}
+        Confidence: {result.disease_confidence.toFixed(2)}%
       </Text>
 
       {!isHealthy && (
-        <View style={styles.severitySection}>
-          <Text style={styles.label}>Severity</Text>
-          <View style={styles.severityRow}>
-            <Text style={[styles.severityValue, { color: severity.color }]}>
-              {severityPct.toFixed(1)}%
-            </Text>
-            <View style={[styles.badge, { backgroundColor: severity.color }]}>
-              <Text style={styles.badgeText}>{severity.label}</Text>
+        <>
+          <View style={styles.severitySection}>
+            <Text style={styles.label}>Severity</Text>
+            <View style={styles.severityRow}>
+              <Text style={[styles.severityValue, { color: severity.color }]}>
+                {severityPct.toFixed(1)}%
+              </Text>
+              <View style={[styles.badge, { backgroundColor: severity.color }]}>
+                <Text style={styles.badgeText}>{severity.label}</Text>
+              </View>
             </View>
           </View>
-          <Text style={styles.severityDetail}>
-            {result.disease_pixels} affected pixels out of {result.plant_pixels} total plant pixels
-          </Text>
-        </View>
+
+          {result.causes.length > 0 && (
+            <View style={styles.infoSection}>
+              <Text style={styles.label}>Causes</Text>
+              {result.causes.map((cause, idx) => (
+                <Text key={idx} style={styles.bodyText}>
+                  • {cause}
+                </Text>
+              ))}
+            </View>
+          )}
+
+          {result.recommendations.length > 0 && (
+            <View style={styles.infoSection}>
+              <Text style={styles.label}>Recommendations</Text>
+              {result.recommendations.map((rec, idx) => (
+                <Text key={idx} style={styles.bodyText}>
+                  • {rec}
+                </Text>
+              ))}
+            </View>
+          )}
+        </>
       )}
 
       {isHealthy && (
@@ -79,6 +95,14 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     letterSpacing: 0.5,
     marginBottom: 4,
+  },
+  sectionSpacing: {
+    marginTop: 14,
+  },
+  cropName: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#2D6A4F",
   },
   diseaseName: {
     fontSize: 22,
@@ -115,10 +139,17 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "600",
   },
-  severityDetail: {
+  infoSection: {
+    marginTop: 16,
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: "#eee",
+  },
+  bodyText: {
+    fontSize: 14,
+    color: "#444",
+    lineHeight: 20,
     marginTop: 6,
-    fontSize: 12,
-    color: "#999",
   },
   healthyNote: {
     marginTop: 12,
